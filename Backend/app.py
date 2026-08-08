@@ -1384,19 +1384,16 @@ def compress_image():
 # 11. START FLASK SERVER
 # ============================================================
 
-# This block runs when we start the application directly.
+@app.route("/")
+def home():
+    return "Compressify backend is running!"
+
+
 if __name__ == "__main__":
-
-    # 0.0.0.0 allows Render to receive requests from
-    # outside the server.
-    #
-    # Render provides the PORT number through an
-    # environment variable, so we read it here.
-
-    import os
-
     app.run(
         host="0.0.0.0",
-        port=int(os.environ.get("PORT", 5000)),
+        port=5000,
         debug=False
     )
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

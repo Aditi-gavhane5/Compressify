@@ -1,0 +1,1610 @@
+/* =========================================================
+   COMPRESSIFY - IMAGE COMPRESSOR
+   MAIN STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL SETTINGS
+   ========================================================= */
+
+/*
+    The * selector means:
+
+    "Apply these rules to EVERY element."
+
+    box-sizing: border-box makes width calculations
+    much easier because padding and borders are included
+    inside the element's total width.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+    Remove the browser's default margin and padding.
+
+    Browsers normally add some spacing automatically.
+    We remove it so we can control the design ourselves.
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+    Smooth scrolling means that when the user clicks
+    "Get Started" or "Compress an Image", the page
+    smoothly moves to that section instead of jumping.
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*
+    Main body styling.
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #faf9ff;
+
+    color: #20202a;
+
+    line-height: 1.6;
+}
+
+
+/*
+    Remove the default underline from links.
+*/
+
+a {
+    text-decoration: none;
+}
+
+
+/*
+    Make buttons inherit the website font.
+*/
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+
+/* =========================================================
+   2. NAVIGATION BAR
+   ========================================================= */
+
+/*
+    The navigation bar sits at the top of the page.
+*/
+
+nav {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 7%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-bottom: 1px solid #eeeeF6;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* ---------------- LOGO ---------------- */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #29254a;
+}
+
+
+/*
+    Purple square containing the logo symbol.
+*/
+
+.logo-icon {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: #6557d8;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    box-shadow: 0 7px 20px rgba(101, 87, 216, 0.22);
+}
+
+
+/* ---------------- NAVIGATION LINKS ---------------- */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+    color: #666477;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.2s ease;
+}
+
+
+.nav-links a:hover {
+    color: #5c50cc;
+}
+
+
+/*
+    Special styling for the Get Started button.
+*/
+
+.nav-links .get-started {
+    background: #6557d8;
+
+    color: white;
+
+    padding: 10px 19px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    box-shadow: 0 7px 18px rgba(101, 87, 216, 0.2);
+}
+
+
+.nav-links .get-started:hover {
+    background: #5548c5;
+
+    transform: translateY(-1px);
+}
+
+
+
+/* =========================================================
+   3. HERO SECTION
+   ========================================================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 90px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(123, 109, 226, 0.14),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #faf9ff
+        );
+}
+
+
+/* ---------------- LEFT SIDE ---------------- */
+
+.hero-content {
+    max-width: 590px;
+}
+
+
+/*
+    Small purple badge above the heading.
+*/
+
+.hero-badge {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background: #f0edff;
+
+    color: #6659d3;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+
+/*
+    Main hero heading.
+*/
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 6vw, 76px);
+
+    line-height: 1.04;
+
+    letter-spacing: -3px;
+
+    color: #242235;
+}
+
+
+/*
+    Hero description.
+*/
+
+.hero-content > p {
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    color: #747184;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   4. HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+
+/*
+    Main purple CTA button.
+*/
+
+.primary-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 23px;
+
+    border-radius: 11px;
+
+    background: #6557d8;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 25px rgba(101, 87, 216, 0.25);
+
+    transition: 0.2s ease;
+}
+
+
+.primary-button:hover {
+    background: #5548c5;
+
+    transform: translateY(-2px);
+}
+
+
+/*
+    Secondary transparent button.
+*/
+
+.secondary-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 23px;
+
+    border-radius: 11px;
+
+    background: white;
+
+    border: 1px solid #dedcea;
+
+    color: #4e4a5d;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.secondary-button:hover {
+    border-color: #b9b2e8;
+
+    color: #5d51cc;
+
+    background: #fbfaff;
+}
+
+
+
+/* =========================================================
+   5. HERO BENEFITS
+   ========================================================= */
+
+.hero-benefits {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 27px;
+}
+
+
+.hero-benefits span {
+    color: #777384;
+
+    font-size: 13px;
+}
+
+
+
+/* =========================================================
+   6. HERO PREVIEW CARD
+   ========================================================= */
+
+.hero-preview {
+    width: 48%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.preview-window {
+    width: min(520px, 100%);
+
+    background: white;
+
+    border: 1px solid #e7e4f1;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(52, 45, 91, 0.12);
+}
+
+
+/* ---------------- FAKE WINDOW HEADER ---------------- */
+
+.window-header {
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 0 17px;
+
+    background: #f7f6fb;
+
+    border-bottom: 1px solid #eeeef5;
+}
+
+
+.window-header span {
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #d5d1df;
+}
+
+
+/* ---------------- PREVIEW CONTENT ---------------- */
+
+.preview-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 35px 25px;
+}
+
+
+.preview-item {
+    flex: 1;
+
+    text-align: center;
+}
+
+
+.preview-item h4 {
+    margin: 0 0 12px;
+
+    color: #8a8695;
+
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+}
+
+
+/*
+    Placeholder image boxes.
+
+    These can later be replaced with actual
+    sample images if you want.
+*/
+
+.image-placeholder {
+    height: 180px;
+
+    border-radius: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+/*
+    Original image placeholder.
+*/
+
+.image-placeholder.original {
+    background:
+        linear-gradient(
+            135deg,
+            #e8e2dc,
+            #cbbca9
+        );
+}
+
+
+/*
+    Compressed image placeholder.
+*/
+
+.image-placeholder.compressed {
+    background:
+        linear-gradient(
+            135deg,
+            #dcd8f6,
+            #aaa0e4
+        );
+}
+
+
+.preview-item strong {
+    font-size: 14px;
+
+    color: #302d40;
+}
+
+
+.preview-arrow {
+    font-size: 27px;
+
+    color: #918aa7;
+
+    flex-shrink: 0;
+}
+
+
+/* ---------------- PREVIEW FOOTER ---------------- */
+
+.preview-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 25px;
+
+    background: #faf9fd;
+
+    border-top: 1px solid #efedf5;
+
+    font-size: 12px;
+}
+
+
+.preview-footer strong {
+    color: #6557d8;
+}
+
+
+.preview-footer span {
+    color: #888392;
+}
+
+
+
+/* =========================================================
+   7. COMPRESSOR SECTION
+   ========================================================= */
+
+.compressor-section {
+    padding: 90px 7% 110px;
+
+    background: #f7f6fb;
+}
+
+
+/* ---------------- SECTION HEADING ---------------- */
+
+.section-heading {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 40px;
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    color: #292638;
+
+    font-size: 38px;
+
+    letter-spacing: -1px;
+}
+
+
+.section-heading p {
+    margin-top: 10px;
+
+    color: #858191;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================================
+   8. UPLOAD BOX
+   ========================================================= */
+
+.upload-box {
+    max-width: 900px;
+
+    min-height: 350px;
+
+    margin: 0 auto;
+
+    padding: 55px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: white;
+
+    border: 2px dashed #d9d4ed;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 45px rgba(53, 46, 93, 0.07);
+
+    transition: 0.25s ease;
+}
+
+
+.upload-box:hover {
+    border-color: #aaa0df;
+
+    box-shadow:
+        0 20px 55px rgba(53, 46, 93, 0.1);
+}
+
+
+/* ---------------- UPLOAD ICON ---------------- */
+
+.upload-icon {
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #efedff;
+
+    color: #6557d8;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.upload-box h3 {
+    margin: 0;
+
+    font-size: 22px;
+
+    color: #343040;
+}
+
+
+.upload-box > p:not(.supported-formats):not(.file-limit) {
+    color: #96919f;
+
+    margin: 8px 0 16px;
+}
+
+
+
+/* =========================================================
+   9. CHOOSE IMAGE BUTTON
+   ========================================================= */
+
+.choose-button {
+    border: none;
+
+    padding: 13px 26px;
+
+    border-radius: 11px;
+
+    background: #6557d8;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 20px rgba(101, 87, 216, 0.2);
+
+    transition: 0.2s ease;
+}
+
+
+.choose-button:hover {
+    background: #5548c5;
+
+    transform: translateY(-2px);
+}
+
+
+.choose-button:active {
+    transform: translateY(0);
+}
+
+
+
+/* =========================================================
+   10. SUPPORTED FORMATS
+   ========================================================= */
+
+.supported-formats {
+    margin-top: 25px;
+
+    color: #777283;
+
+    font-size: 12px;
+}
+
+
+.file-limit {
+    margin-top: -5px;
+
+    color: #a09ba8;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   11. COMPRESSION SETTINGS CARD
+   ========================================================= */
+
+/*
+    This is the NEW section containing:
+
+        Quality Mode
+        Target Size Mode
+        Quality Slider
+        Target Size Input
+        Quick Target buttons
+        Output Format
+        Compress button
+*/
+
+.compression-settings {
+    max-width: 900px;
+
+    margin: 25px auto 0;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e8e5f0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(53, 46, 93, 0.06);
+}
+
+
+
+/* =========================================================
+   12. COMPRESSION MODE
+   ========================================================= */
+
+.compression-mode {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 27px;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid #eeeef4;
+}
+
+
+.compression-mode > label:first-child {
+    width: 100%;
+
+    color: #393544;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+
+/*
+    Individual radio button option.
+*/
+
+.mode-option {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    border: 1px solid #e3e0eb;
+
+    border-radius: 10px;
+
+    color: #686374;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.mode-option:hover {
+    border-color: #b8b1e3;
+
+    background: #faf9ff;
+
+    color: #5f53c9;
+}
+
+
+.mode-option input {
+    accent-color: #6557d8;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================================
+   13. QUALITY SETTINGS
+   ========================================================= */
+
+.quality-settings {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 22px;
+}
+
+
+.quality-settings label {
+    color: #4b4756;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/*
+    The actual range slider.
+*/
+
+#qualitySlider {
+    flex: 1;
+
+    min-width: 200px;
+
+    accent-color: #6557d8;
+
+    cursor: pointer;
+}
+
+
+#qualityValue {
+    min-width: 50px;
+
+    text-align: center;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    background: #f0edff;
+
+    color: #5e51ca;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   14. TARGET SIZE SETTINGS
+   ========================================================= */
+
+.target-size-settings {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 15px;
+}
+
+
+.target-size-settings label {
+    color: #4b4756;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/*
+    Target size number input.
+
+    Example:
+
+        [ 100 ]
+*/
+
+#targetSize {
+    width: 150px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #ddd9e7;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: #373341;
+
+    background: #faf9fd;
+
+    font-size: 14px;
+
+    transition: 0.2s ease;
+}
+
+
+#targetSize:focus {
+    border-color: #8d83db;
+
+    box-shadow:
+        0 0 0 3px rgba(101, 87, 216, 0.1);
+}
+
+
+/*
+    KB / MB dropdown.
+*/
+
+#targetUnit {
+    padding: 11px 12px;
+
+    border: 1px solid #ddd9e7;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #faf9fd;
+
+    color: #4a4654;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================================
+   15. QUICK TARGET BUTTONS
+   ========================================================= */
+
+.quick-targets {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+
+.quick-targets p {
+    width: 100%;
+
+    margin: 0 0 2px;
+
+    color: #777283;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.target-preset {
+    border: 1px solid #ddd9eb;
+
+    background: #faf9ff;
+
+    color: #6557d8;
+
+    padding: 8px 13px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.target-preset:hover {
+    background: #6557d8;
+
+    color: white;
+
+    border-color: #6557d8;
+
+    transform: translateY(-1px);
+}
+
+
+
+/* =========================================================
+   16. OUTPUT FORMAT
+   ========================================================= */
+
+.compression-settings > label[for="formatSelect"] {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #4b4756;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+#formatSelect {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ddd9e7;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #faf9fd;
+
+    color: #403c4b;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+#formatSelect:focus {
+    border-color: #8d83db;
+
+    box-shadow:
+        0 0 0 3px rgba(101, 87, 216, 0.1);
+}
+
+
+
+/* =========================================================
+   17. COMPRESS BUTTON
+   ========================================================= */
+
+.compress-button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #6557d8;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 24px rgba(101, 87, 216, 0.22);
+
+    transition: 0.2s ease;
+}
+
+
+.compress-button:hover {
+    background: #5548c5;
+
+    transform: translateY(-2px);
+}
+
+
+.compress-button:disabled {
+    opacity: 0.65;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+
+/* =========================================================
+   18. COMPRESSION RESULT
+   ========================================================= */
+
+.compression-result {
+    max-width: 900px;
+
+    margin: 25px auto 0;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e5e2ee;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px rgba(53, 46, 93, 0.08);
+
+    text-align: center;
+}
+
+
+.compression-result h3 {
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    color: #302d3d;
+
+    font-size: 22px;
+}
+
+
+.compression-result p {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    max-width: 500px;
+
+    margin: 10px auto;
+
+    padding: 13px 16px;
+
+    border-radius: 10px;
+
+    background: #f8f7fc;
+
+    color: #777281;
+
+    font-size: 13px;
+}
+
+
+.compression-result strong {
+    color: #403b50;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================================
+   19. DOWNLOAD BUTTON
+   ========================================================= */
+
+.download-button {
+    margin-top: 18px;
+
+    padding: 13px 25px;
+
+    border: 1px solid #6557d8;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #5c50cb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.download-button:hover {
+    background: #6557d8;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 22px rgba(101, 87, 216, 0.2);
+}
+
+
+
+/* =========================================================
+   20. FEATURES SECTION
+   ========================================================= */
+
+.features-section {
+    padding: 80px 7%;
+
+    text-align: center;
+
+    background: white;
+}
+
+
+.features-section h2 {
+    margin: 0;
+
+    color: #302d3e;
+
+    font-size: 35px;
+}
+
+
+.features-section p {
+    color: #85808e;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================================
+   21. IMAGE PREVIEW AFTER UPLOAD
+   ========================================================= */
+
+/*
+    When JavaScript adds an image to the upload box,
+    these rules help keep it looking clean.
+*/
+
+.upload-box img {
+    display: block;
+
+    max-width: 400px;
+
+    max-height: 280px;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(40, 35, 65, 0.1);
+}
+
+
+
+/* =========================================================
+   22. RESPONSIVE DESIGN
+   ========================================================= */
+
+/*
+    These rules activate when the screen becomes
+    smaller than 900px.
+
+    This is useful for tablets and smaller laptops.
+*/
+
+@media (max-width: 900px) {
+
+
+    /* Stack hero content vertically. */
+
+    .hero {
+        flex-direction: column;
+
+        padding-top: 60px;
+
+        text-align: center;
+    }
+
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+
+    .hero-content > p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .hero-benefits {
+        justify-content: center;
+    }
+
+
+    .hero-preview {
+        width: 100%;
+
+        max-width: 600px;
+    }
+
+}
+
+
+
+/* =========================================================
+   23. MOBILE DESIGN
+   ========================================================= */
+
+/*
+    These rules activate on small phone screens.
+*/
+
+@media (max-width: 600px) {
+
+
+    /* Smaller navigation spacing. */
+
+    nav {
+        padding: 16px 5%;
+    }
+
+
+    /*
+        Hide normal navigation links on very small
+        screens to keep the header clean.
+    */
+
+    .nav-links {
+        gap: 10px;
+    }
+
+
+    .nav-links a:not(.get-started) {
+        display: none;
+    }
+
+
+    /* Smaller hero heading. */
+
+    .hero h1 {
+        font-size: 46px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+
+    /*
+        Stack hero buttons.
+    */
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+
+    /*
+        Preview becomes smaller.
+    */
+
+    .preview-content {
+        gap: 8px;
+
+        padding: 22px 12px;
+    }
+
+
+    .image-placeholder {
+        height: 130px;
+    }
+
+
+    .preview-arrow {
+        font-size: 20px;
+    }
+
+
+    /*
+        Compressor section gets smaller padding.
+    */
+
+    .compressor-section {
+        padding: 60px 5%;
+    }
+
+
+    .upload-box {
+        min-height: 300px;
+
+        padding: 35px 20px;
+    }
+
+
+    /*
+        Compression settings get smaller.
+    */
+
+    .compression-settings {
+        padding: 22px;
+    }
+
+
+    /*
+        Make quality slider full width.
+    */
+
+    .quality-settings {
+        gap: 10px;
+    }
+
+
+    #qualitySlider {
+        width: 100%;
+    }
+
+
+    /*
+        Target input becomes easier to use
+        on mobile.
+    */
+
+    #targetSize {
+        width: 100%;
+    }
+
+
+    #targetUnit {
+        width: 100%;
+    }
+
+
+    /*
+        Result information stacks vertically.
+    */
+
+    .compression-result p {
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+
+
+    /*
+        Make quick target buttons easier
+        to tap on mobile.
+    */
+
+    .target-preset {
+        flex: 1;
+
+        min-width: 70px;
+    }
+
+}

@@ -1384,9 +1384,6 @@ def compress_image():
 # 11. START FLASK SERVER
 # ============================================================
 
-@app.route("/")
-def home():
-    return "Compressify backend is running!"
 
 
 if __name__ == "__main__":
@@ -1395,5 +1392,3 @@ if __name__ == "__main__":
         port=5000,
         debug=False
     )
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)

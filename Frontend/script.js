@@ -1340,7 +1340,7 @@ compressButton.addEventListener(
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:5000/compress",
+                    "https://compressify-backend-4ekk.onrender.com/compress",
                     {
                         method: "POST",
 
